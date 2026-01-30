@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Guess the Number (1-5)</h2>
+<input id="guess">
+<button onclick="check()">Guess</button>
+<p id="result"></p>
+
+<script>
+let number = Math.floor(Math.random() * 5) + 1;
+function check() {
+  let g = document.getElementById("guess").value;
+  document.getElementById("result").innerText =
+    (g == number) ? "Correct!" : "Try again!";
+}
+</script>
+
+</body>
+</html>
